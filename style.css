@@ -1,0 +1,175 @@
+/*--- Variables ---*/
+:root {
+    --main-color : #b879fe;
+    --second-color : #7b16ee;
+    --attenued-color : rgba(183, 121, 254, 0.35);
+    --title-color : #b879fe;
+    --text-color : white;
+    --container-color : rgba(24, 24, 24, 0.6);
+    --background-color : rgb(24, 24, 24);
+}
+
+
+/*--- Reset CSS & General ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color)
+}
+
+
+/*--- Titles ---*/
+h1, h2, h3 {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--title-color);
+    text-align: left;
+}
+h1, h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--text-color);
+}
+
+
+/*--- General style ---*/
+main {margin: 0 40px; text-align: justify;}
+
+header {padding: 20px 0;}
+
+footer {
+    background: var(--attenued-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(184, 121, 254, 0.11);
+    margin: 0 40px;
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    color: var(--text-color);
+    font-weight: bolder;
+}
+
+.flex {display: flex;}
+.flex * {margin: 0 10px;}
+.flex div {flex: 1;}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.print {display: none;}
+
+
+/*--- Links & Buttons ---*/
+a {color: var(--main-color);}
+a:hover, a:focus {text-decoration: underline;}
+a:active {color: var(--second-color);}
+
+button {
+    background-color: var(--attenued-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+button:hover, button:focus {background-color: var(--second-color);}
+button:active {background-color: var(--main-color);}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+}
+a:hover .icon, a:focus .icon {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+/*--- Sections ---*/
+section, #info {
+    background-color: var(--container-color);
+    padding: 25px 50px;
+    margin: 25px 0;
+    background: var(--container-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.9px);
+    -webkit-backdrop-filter: blur(9.9px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+
+/*--- Images & Miscs ---*/
+.badge {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 30px var(--background-color);
+    z-index: 1;
+}
+
+#me {font-style: italic;}
+
+
+/*--- Scrollbar ---*/
+::-webkit-scrollbar {width: 10px; background-color:  var(--background-color);}
+::-webkit-scrollbar-thumb {background: var(--attenued-color); }
+::-webkit-scrollbar-thumb:hover {background: var(--main-color) }
+
+
+/*--- Responsive ---*/
+@media screen and (max-width: 800px){
+    main, footer {margin: 0 20px;}
+    .flex {flex-direction: column; margin: 0;}
+    .flex * {margin: 5px 0;}
+    section {padding: 25px 15px;}
+}
+
+@media screen and (min-width: 2200px){
+    main, footer {margin: 0 100px;}
+}
+
+
+/*--- For JS (lazyload & background) ---*/
+.apparition {
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+.invisible {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    /* Backup background if no JS */
+    background-image: url('https://cdn.dribbble.com/users/1595839/screenshots/11700339/media/5b39c07a6a721b6b440288c6c6ec5cb1.gif');
+    background-size: cover;
+}

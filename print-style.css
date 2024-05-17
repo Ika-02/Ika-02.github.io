@@ -1,0 +1,55 @@
+.no-print, img, button, footer, span {display: none;}
+.print {display: block;}
+.invisible {opacity: 1;} /* Because of JS (lazyload) */
+
+*, a, header {color: black; margin: 0; padding: 0;}
+.center {display: block; text-align: left;}
+
+main {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+section, #info {
+    background-color: none;
+    box-shadow: none;
+    border-bottom: #7b16ee 2px solid;  
+    margin: 2px 0;
+    padding: 12px 0;
+}
+#info {
+    padding: 0;
+    padding-bottom: 12px;
+}
+
+#photo {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    float: right;
+    z-index: 150;
+    box-shadow: none;
+}
+
+li .print {display: inline;}
+.print p {padding-bottom: 4px;}
+
+#certifications {display: flex;}
+#certifications h2 {white-space: nowrap;}
+#certifications p {display: none;}
+
+h1, h2, h3 {
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+h1 {font-size: x-large;}
+h2 {
+    color: #7b16ee;
+    text-align: left;
+    font-size: large;
+}
+h3 {font-size: medium;}
