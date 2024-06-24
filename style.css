@@ -169,7 +169,5 @@ section, #info {
     height: 100%;
     position: fixed;
     z-index: -1;
-    /* Backup background if no JS */
-    background-image: url('https://cdn.dribbble.com/users/1595839/screenshots/11700339/media/5b39c07a6a721b6b440288c6c6ec5cb1.gif');
-    background-size: cover;
+    background-color: rgb(44, 44, 44);
 }
